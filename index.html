@@ -1,979 +1,682 @@
-<!DOCTYPE html>
-<html  lang="tr"  xmlns:og="http://ogp.me/ns#">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEFEY - Ramazan Yeni</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
 
-    <!-- Made by Recep YENİ recepyeni@yahoo.com -->
-
-    <meta property = "og: type" content = "website" />
-    <meta property = "og: title" content = "MEFEY - Ramazan Yeni" />
-    <meta property = "og: description" content = "Tekstil çorap üretiminde faaliyet göstermekteyiz." />
-    <meta property = "og: image" content = "img/icon.jpg" />
-    <meta property = "og: url" content = "https://www.mefey.tk" />
-    <meta property = "og: site_name" content = "MEFEY - Ramazan Yeni" />
-
-    <link rel="icon" type="image/x-icon" href="img/icon.jpg">
-    
-        <!-- Required meta tags -->
-        
-    
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta http-equiv="Content-Type" content="text/html; ">
-        <meta http-equiv="Content-Language" content="tr">
-        <meta name="keywords" content="Ramazan, yeni, ramazan yeni, mefey, mefey çorap, çorap, tekstil, borsa, hisse, hesap, hesaplama">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Ramazan Yeni">
-        <!-- <meta http-equiv="refresh" content="500">  -->
-        <!-- <title>merhabalar Patent, Arduino, Subtitle Reader, WebDesign</title> -->
-        <meta name="description" content="Tekstil çorap üretiminde faaliyet göstermekteyiz. Ramazan Yeni">
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; ">
+    <meta http-equiv="Content-Language" content="tr">
+    <meta name="keywords" content="merhabalar, patent, arduino, subtitle, web, design, webdesign, web design, web sitesi, site, site yapımı, websitesi yapımı, web sitesi yapımı, faydalı model, ardunio, arduino eğitimi, eğitim, arduino başlangıç eğitimi, youtube subtitle reader, youtube voicy subtitle reader, voicy reader, sesli okuyucu, altyazı sesli oku, altyazı seslendir, altyazı seslendirici, altyazı okuyucu">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Recep YENİ">
+     <!-- <meta http-equiv="refresh" content="30">  -->
+    <title>merhabalar Patent, Arduino, Subtitle Reader, WebDesign</title>
+    <meta name="description" content="Merhabalar. Patent almanıza yardımcı olunur. Ardunio başlangıç eğitimi verilir. Youtube altyazılarınız seslendirilir. Web sitesi kurmanız sağlanır.">
 
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
-    <script src="js/angular.min.js"></script>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DREN3WGVRC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-DREN3WGVRC');
-</script>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- 
-  https://fonts.google.com/icons 
-  <span class="material-icons">face</span>
--->
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
-       .baslik {
-         margin: 20px auto;
-         padding: 5px;
-         border: solid 2px gray;
-         border-radius: 5px;
-         background-color: aliceblue; 
-         background: linear-gradient(to right, rgba(255, 0, 0, 0.281) 0%,rgba(4, 0, 255, 0.281) 50%, rgba(2, 255, 0, 0.281) 100%); width: fit-content;
-         box-shadow: 5px 5px 15px 5px black;
-         /* transform: scale(1.2) rotate(2deg) translate(7px, 8px) skew(3deg, 4deg); */
-       }
+        .navbar {
+            opacity: 0.8;
+            border-bottom: 1px solid #fff;
+        }
 
+        .jumbotron {
+            padding-top: 100px;
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        footer {
+            margin-bottom: 100px;
+        }
 
     </style>
+
+    <script src="js/responsivevoice.js"></script>
+
+
+
 </head>
+
 <body>
 
-  <div class="container">
-  <div data-ng-app="myApp" data-ng-controller="myCtrl">
+
+    <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
+        <a href="#baslik" id="basliklink"></a>
+        <div class="container">
+            <a href="#" class="navbar-brand" onclick="toggleactive('myhomelink','myhome')">
+                ✋ merhabalar.net
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" onfocusout="this.click();" id="toggicon2">
+                <span class="navbar-toggler-icon"  id="toggicon1"></span>
+            </button>
+
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li id="mypatentlink" class="nav-item" onclick="toggleactive('mypatentlink','mypatent')">
+                        <a href="#" class="nav-link">
+                            Patent
+                        </a>
+                    </li>
+                    <li id="myarduinolink" class="nav-item" onclick="toggleactive('myarduinolink','myarduino')">
+                        <a href="#" class="nav-link">
+                            Arduino Kursu
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a id="myytlink" href="#" class="nav-link" onclick="toggleactive('myytlink','myyt')">
+                            Subtitle Reader
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="myweblink" href="#" class="nav-link" onclick="toggleactive('myweblink','myweb')">
+                            Web Design
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="myhomelink" href="#" class="nav-link" onclick="toggleactive('myhomelink','myhome')">
+                            Home
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <main>
+        <div class="container">
+            <div class="row"  id="baslik">
+                <div class="col-md-9">
+
+                    <div id="mypatent" class="mypages">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h1>Patent</h1>
+                            </div>
+                            <div class="card-body">
+                                <img src="img/patent.jpg" class="card-img-top img-thumbnail" alt="" style="position: absolute; width: 90%; opacity: .03;">
+
+                                <h4 class="card-title">Patentiniz Olsun...</h4>
+                                <p class="card-text">
+                                    <strong>Patent</strong> ile <strong>Faydalı Model</strong> arasındaki fark; patent, jilet ile sakal
+                                    traşı olma fikri ise; faydalı model de, referans gösterilen patentin geliştirilerek
+                                    iki jilet ile traş olma fikridir. <br>Mesela, ben, altyazıların bir programla seslendirilmesi fikrinin patenti için başvuruda bulundum. Süreç biraz uzun olabiliyor, ama, önemli olan başvuru zamanı. <br> Faydalı modelde, Türk Patent Enstitüsü, inceleme
+                                    ücreti olan 100 TL'yi almamaktadır. Çünkü zaten patentte incelenmiştir.
+                                </p>
+                                <p class="card-text">
+                                    Aklınıza gelen ışıltılı fikirleri ne zaman dile getireceksiniz? <br> Gelin, birlikte
+                                    patent alma yolculuğuna çıkalım. Hayata ve birbirimize katkımız olsun, karşılıklı
+                                    sevinelim. <br> Eposta adresim ile irtibata geçebilirsiniz.
+                                </p>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Fiyat</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Patentinin alınıp alınmadığının kontrolü: </th>
+                                            <td>100 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Patent metninin hazırlanması: </th>
+                                            <td>400 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Enstitü'ye başvuru(*): </th>
+                                            <td>40 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Enstitü'ye araştırma raporu başvurusu(*): </th>
+                                            <td>100 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Enstitü'ye inceleme raporu başvurusu(*): </th>
+                                            <td>100 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Toplam(*): </th>
+                                            <td>740 TL</td>
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                                <p class="text-muted">*: Türk Patent Enstitüsü'nün 29.12.2019 tarihindeki fiyatlarıdır. <br>Yeni fiyat
+                                    belirlenirse, o zamanki fiyat geçerlidir.</p>
+
+
+
+                            </div>
+                            <div class="card-footer">
+                                <p><a download href="pdf/faydalimodelambulanssedye.pdf">Faydalı model örneği indirin.</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="myarduino" class="mypages">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h1>Arduino Kursu</h1>
+                            </div>
+                            <div class="card-body">
+
+                                <!-- <img src="img/robotkol.jpg" class="card-img-top img-thumbnail" alt="" style="position: absolute; height: 100%; width: auto; background-repeat: no-repeat; opacity: .05;">
+                                <img id="patentinizolsun" src="img/webdesigncourses.jpg" class="card-img-top img-thumbnail"
+                                    alt="Patent"> -->
+
+                                <h4 class="card-title">Arduino</h4>
+                                <p class="card-text">
+                                    Çizgiyi takip eden oyuncaklar nasıl mı yapılıyor? Robotik yapay zeka, merakınızı mı çekiyor? <br> Arduino başlangıç eğitimi alarak, bu dev dünyaya siz de adım atabilirsiniz. Henüz adım atmayanlara ön ayak olabilirsiniz. <br> Yapılmış örnekleri hayata geçirmeye çalışırken zevk alabilirsiniz. Kendinizden bir şeyler ekleyebilir veya çıkarabilirsiniz. Kendinizi geliştirerek tasarımınızı baştan yapabilirsiniz. <br> Mesela, kursumuz sonunda, aşağıdaki videodaki robot kol'a, istediğiniz hareketi öğretip yaptırabilirsiniz. Buyrun, bu isteğinizi gerçeğe dönüştürme yolunda yardımcı olayım. Birbirimize faydamız olsun. Karşılıklı sevinelim. <br> Bana eposta adresim ile ulaşabilirsiniz.
+                                </p>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/qovZKW0DxWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+                                <div id="accordion" role="tablist">
+                                    <div class="card">
+                                        <div class="card-header" role="tab" id="heading1">
+                                            <h5 class="mb-0">
+                                                <a data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                                    Öğrenecekleriniz
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
+                                            <div class="card-body">
+                                                <p>Robotik Kodlamanın temellerini almış olacaksınız</p>
+                                                <p>Arduino'nun ne olduğunu öğreneceksiniz</p>
+                                                <p>Arduino'nun yazılımını öğreneceksiniz</p>
+                                                <p>Temel elektronik bilgileri alacaksınız</p>
+                                                <p>Arduino ile 14 adet proje geliştireceksiniz</p>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" role="tab" id="heading2">
+                                            <h5 class="mb-0">
+                                                <a data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                                    Gereksinimler
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse2" class="collapse show" role="tabpane2" aria-labelledby="heading2">
+                                            <div class="card-body">
+                                                <p>Başlangıç için, bilgisayar ve internet yeterli.</p>
+                                                <p>İleri seviye için kurstaki proje malzemelerine ihtiyacınız olacak.</p>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" role="tab" id="heading3">
+                                            <h5 class="mb-0">
+                                                <a data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                                    Kurs Boyunca Geliştirilecek Projeler
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse3" class="collapse show" role="tabpane3" aria-labelledby="heading3">
+                                            <div class="card-body">
+                                                <ol>
+                                                    <li>Led Yakma</li>
+                                                    <li>Trafik Lambası</li>
+                                                    <li>Karanlıkta Yanan Lamba</li>
+                                                    <li>Rengarenk Animasyonlu Oda Lambası</li>
+                                                    <li>LCD Ekrana Yazı Yazdırma</li>
+                                                    <li>Termometre</li>
+                                                    <li>Hareket Tespiti</li>
+                                                    <li>Hareketli Radar</li>
+                                                    <li>Dijital Metre</li>
+                                                    <li>Açı Ölçer</li>
+                                                    <li>Ledli ve Sesli Park Sensörü</li>
+                                                    <li>Akıllı Çöp Kovası</li>
+                                                    <li>Öğrenen Robot Kol</li>
+                                                    <li>Engelden Kaçan Araba</li>
+                                                </ol>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" role="tab" id="heading4">
+                                            <h5 class="mb-0">
+                                                <a data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                    Bu Kurs Kimler İçin Uygun?
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse4" class="collapse show" role="tabpane4" aria-labelledby="heading4">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Arduino'yu öğrenmek isteyenler</li>
+                                                    <li>Arduino ile proje geliştirmek isteyenler</li>
+                                                    <li>Arduino ile robotik dünyasına giriş yapmak isteyenler</li>
+                                                    <li>Kendi robotunu kendisi geliştirmek isteyenler</li>
+                                                    <li>Faydalı bir hobiye sahip olmak isteyenler</li>
+                                                    <li>Çocuklara robotik kodlama öğretmek isteyenler</li>
+                                                </ul>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" role="tab" id="heading5">
+                                            <h5 class="mb-0">
+                                                <a data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                    Fiyatlandırma
+                                                </a>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapse5" class="collapse show" role="tabpane5" aria-labelledby="heading5">
+                                            <div class="card-body">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Fiyat</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Kişiye özel kurs (*): </th>
+                                                            <td>750 TL</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Ek kişi, kişi başına:</th>
+                                                            <td>500 TL</td>
+
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                                <p class="text-muted">*: Belirtilen tüm derslerin toplam fiyatıdır.</p>
+                                                <p class="text-muted">Ders malzemeleri olmadan, bilgisayar üzerinden de proje geliştirilebilir. Ama, ders malzemeleri ile yapmak daha güzel. Ders malzemelerinin toplam fiyatı, önceki derslerde kullanılanları sonraki derslerde de kullanırsak, zamana göre değişebilmekle beraber, yaklaşık olarak 250 TL'dir. Bunu, ister kendiniz alabilirsiniz, isterseniz o anki piyasaya göre, benden sipariş vermemi isteyebilirsiniz.</p>
+                                                <p class="text-muted">Günlük en az 1 saat kurs verilecektir. Toplamda yaklaşık 9 saat sürecektir. </p>
+                                                <p class="text-muted">Kurs ortamı olarak, evinize misafir gelebilirim. Evime misafir de gelebilirsiniz. İsterseniz bilgisayar olan herhangi bir yerde de eğitim verilebilir. </p>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                    
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="myyt" class="mypages">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h1>Subtitle Reader</h1>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input id="yturl" type="text" class="form-control" placeholder="Youtube video adresi giriniz.." onchange="myurlparse()">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-secondary" onclick="myurlparse()">Go!</button>
+                                    </span>
+                                    <a type="button" id="myalert" class="btn btn-outline-success btn-sm btn-block" onclick="mybadge()">Click Video and Allow Voicy Reading...</a>
+                                </div>
+
+                                <div Width="100%" height="450" id="player"></div>
+
+                                <h4 class="card-title">Youtube Subtitle Voicy Reader</h4>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="myweb" class="mypages">
+                        <div class="card mb-0">
+                            <div class="card-header">
+                                <h1>Web Site Design</h1>
+                            </div>
+                            <div class="card-body">
+                                <img src="img/webdesigncourses.jpg" class="card-img-top img-thumbnail" alt="" style="position: absolute; height: 100%; width: auto; background-repeat: no-repeat; opacity: .03;">
+                                <!-- <img id="patentinizolsun" src="img/webdesigncourses.jpg" class="card-img-top img-thumbnail"
+                                    alt="Patent"> -->
+
+                                <h4 class="card-title">Web Siteniz Olsun...</h4>
+                                <p class="card-text">
+                                    Web sitenizin olmasını mı istiyorsunuz? <br> Taslak olarak bir kağıda çizin, gerçeğe dönüştürme yolunda yardımcı olayım. Birbirimize faydamız olsun. Karşılıklı sevinelim. <br> Bana eposta adresim ile ulaşabilirsiniz.
+                                </p>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Fiyat</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Kişiye Özel Web Sitesi Yapımı(*): </th>
+                                            <td>300 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Güncelleme(*): </th>
+                                            <td>100 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">.tk .ml uzantılı domain ismi: </th>
+                                            <td>0 TL</td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">.com, .net vb. uzantılı domain ismi: </th>
+                                            <td>Değişken ücretli</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <p class="text-muted">*: Statik web sitesi için fiyattır. Dinamik (veri tabanı gerektiren mesajlaşma, üye olunması, sohbet odaları vb. gibi) özellikler için, isteğinize ve harcanan zamanımıza göre ücret değerlendirilir. İki tarafın da sevineceği bir yol bulunabilir. </p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div id="myhome" class="mypages">
+                        <header>
+                            <img src="img/flowers.jpg" class="card-img-top img-thumbnail" alt="" style="position: absolute; height: 100%; width: auto; background-repeat: no-repeat; opacity: .04;">
+                            <div class="jumbotron bg-dark text-white">
+
+                                <div class="container">
+
+                                    <div class="col-md-6 px-0">
+                                        <h1 class="display-5 font-italic">
+                                            ✋ merhabalar.net
+                                        </h1>
+                                        <p>
+                                            <p class="lead my-3"> Merhabalar. Bu sitede, birbirimize yardımcı
+                                                olabileceğimiz bir çok konu
+                                                var.</p>
+                                            <p class="lead my-3">Mesela, <strong>Patent</strong>ini almak istediğiniz bir
+                                                fikriniz, yıllarca aklınızda
+                                                atıl durumda mı? <br> Gün yüzüne çıkaralım, birbirimize faydamız olsun.
+                                            </p>
+                                            <p class="lead my-3">Mesela, AVM'lerdeki tırtıl treninin, siyah çizgiyi nasıl takip ettiğini mi merak ediyorsunuz? <strong>Arduino Robotik programlama</strong>ya giriş yapmak istiyor, ama nereden başlayacağınızı bilmiyor musunuz? Buyrun, Arduino başlangıç kursumuza katılın, gerisi sizin hayalinize kalmış.</p>
+                                            <p class="lead my-3">Mesela, <strong>Web Sitesi</strong> kurmak mı istiyorsunuz? <br>
+                                                Taslağını çizin,
+                                                hayata geçirelim, birbirimize faydamız dokunsun, herkes sevinsin.</p>
+                                            <p class="lead my-3">Mesela, <strong>altyazı seslendirme</strong> servisini kullanmak
+                                                mı istiyorsunuz?
+                                                <br>Buyrun, youtube linkini yapıştırın, ve de altyazı okuma derdiniz
+                                                kalmasın. <br>
+                                                Altyazıyı sizin için, video ile eş zamanlı bir şekilde okuyan sayfaya
+                                                girin, <br> Siz video
+                                                izleyerek sevinin, ben reklamlardan gelen ücret ile sevineyim,
+                                                <br>Reklam verenler
+                                                ürünlerini tanıttıkları için sevinsin, <br>O ürünleri sevenler, ürünü
+                                                aldıkları için bir
+                                                zamanlığına sevinsinler <br>(Alamadıklarında da üzülmesinler, zaten
+                                                eskiden de yoktu, hayata
+                                                devam etsinler),<br>Birbirimize anlık faydalarımız dokunsun. <br>Herkes
+                                                herkesle güzel güzel
+                                                geçinelim. 🙌 💜 🎶 💃 🕺 :)</p>
+
+                                        </p>
+                                        <p class="lead mb-0">
+                                            <a href="#" class="text-white font-weight-bold">Selam ile ✋...</a>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </header>
+                    </div>
+
+                    
+
+
+                    
+
+                    
+
+                </div>
+
+                <div class="col-md-3">
+                    <div id="accordion" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Mesela Patent?
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    <p><strong>Patent</strong>ini almak istediğiniz bir fikriniz, yıllarca aklınızda
+                                        atıl durumda mı? <br> Buyrun, gün yüzüne çıkaralım, birbirimize faydamız olsun.
+                                        ✋💜</p>
+                                    <a href="#!" class="btn btn-primary" onclick="toggleactive('mypatentlink','mypatent')">Patent Sayfası</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Mesela Web Sitesi Design?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="card-body">
+                                    <p><strong>Web Sitesi</strong> kurmak mı istiyorsunuz? <br> Taslağını çizin,
+                                        hayata geçirelim, birbirimize faydamız dokunsun, herkes sevinsin. ✋💜</p>
+                                    <a href="#!" class="btn btn-primary" onclick="toggleactive('myweblink','myweb')">Web
+                                        Sitesi Design</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingThree">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Mesela Altyazı Sesli Okuyucu Sayfası?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="card-body">
+                                    <p><strong>Altyazı seslendirme</strong> servisini kullanmak mı istiyorsunuz?
+                                        <br>Buyrun, youtube linkini yapıştırın, ve de altyazı okuma derdiniz kalmasın.
+                                        <br>
+                                        Altyazıyı sizin için, video ile eş zamanlı bir şekilde okuyan sayfaya girin,
+                                        <br> Siz video
+                                        izleyerek sevinin, ben reklamlardan gelen ücret ile sevineyim, <br>Reklam
+                                        verenler
+                                        ürünlerini tanıttıkları için sevinsin, <br>O ürünleri sevenler, ürünü aldıkları
+                                        için bir
+                                        zamanlığına sevinsinler <br>(Alamadıklarında da üzülmesinler, zaten eskiden de
+                                        yoktu, hayata
+                                        devam etsinler),<br>Birbirimize anlık faydalarımız dokunsun. <br>Herkes herkesle
+                                        güzel güzel
+                                        geçinelim. 🙌 💜 🎶 💃 🕺 :)</p>
+                                    <a href="#!" class="btn btn-primary" onclick="toggleactive('myytlink','myyt')">Youtube Subtitle Voicer</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFive">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Mesela Arduino Robotik Kursu?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="card-body">
+                                    <p>
+                                        Siz de Arduino Robotik programlamaya giriş yapmak istiyor, ama nereden başlayacağınızı bilmiyor musunuz? Buyrun, Arduino başlangıç kursumuza katılın, gerisi sizin hayalinize kalmış.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary" onclick="toggleactive('myarduinolink','myarduino')">Arduino Robotik Kursu</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingFour">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Contacts İletişim
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="card-body">
+                                    <p>
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/recep.yeni" target="_blank">Facebook</a></li>
+                                            <li><a href="https://twitter.com/ReRecepYeni" target="_blank">Twitter</a></li>
+                                            <li><a href="https://www.youtube.com/channel/UC90PLcr7cTMFGGDK9ZayHfg" target="_blank">Youtube</a></li>
+
+                                            <li>recepyeni@yahoo.com</li>
+                                        </ul>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        Tüm hakları saklıdır. merhabalar.net 2019
+    </footer>
+
     
 
-<!--  -->
-<h6 class="baslik"><span class="material-icons">
-  timer
-  </span>KAÇ DK GEÇMİŞ?</h6>
-<div class="col-lg-4">
-  
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">1. GÜN: </span>
-    <input type="number"  class="form-control"  data-ng-model="gun1"><span style="position: absolute; right: 5px;"></span>
-    <button ng-click="dkKaydet()">Kaydet</button>
-      <p>{{dkErrortext}}</p>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    
-    <span class="input-group-text text-primary">1. SAAT: </span>
-    <input type="number"  class="form-control"  data-ng-model="saat1"><span style="position: absolute; right: 5px;"></span> 
-    <span class="input-group-text text-primary">1. DK.: </span>
-    <input type="number"  class="form-control"  data-ng-model="dk1"><span style="position: absolute; right: 5px;"></span> <br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">2. GÜN: </span>
-    <input type="number"  class="form-control" data-ng-init="gun2=zaman.getDate()" data-ng-model="gun2"><span style="position: absolute; right: 5px;"></span>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">2. SAAT: </span>
-    <input type="number"  class="form-control" data-ng-init="saat2=zaman.getHours()" data-ng-model="saat2"><span style="position: absolute; right: 5px;"></span> 
-    <span class="input-group-text text-primary">2. DK.: </span>
-    <input type="number"  class="form-control" data-ng-init="dk2=zaman.getMinutes()" data-ng-model="dk2"><span style="position: absolute; right: 5px;"></span> <br>
-  </div>
-  
-</div>
 
-
-<br>
-Kaç Dk. Geçmiş?: <span style="color: red;"> {{(gun2*1440 + saat2*60 + dk2)-(gun1*1440 + saat1*60 + dk1)}}</span><br>
-Yani Kaç Saat Geçmiş?: <span style="color: blue;"> {{(((gun2*1440 + saat2*60 + dk2)-(gun1*1440 + saat1*60 + dk1))/60).toFixed(1)}}</span><br>
-Yani Kaç Gün Geçmiş?: <span style="color: fuchsia;"> {{(((gun2*1440 + saat2*60 + dk2)-(gun1*1440 + saat1*60 + dk1))/1440).toFixed(2)}}</span><br>
-Bir gün: {{60*24}} dk
-
-<!--  -->
-<hr>
-
-
-<!--  -->
-<h6 class="baslik"><span class="material-icons">
-  android
-  </span>İÇLER DIŞLAR ÇARPIMI</h6>   
-<div class="col-lg-4">
-  
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">1. SAYI: </span>
-    <input type="number"  class="form-control" data-ng-init="idc1=10" data-ng-model="idc1"><span style="position: absolute; right: 5px;"></span> 
-    <span class="input-group-text text-primary">2. SAYI: </span>
-    <input type="number"  class="form-control" data-ng-init="idc2=4" data-ng-model="idc2"><span style="position: absolute; right: 5px;"></span> <br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">3. SAYI: </span>
-    <input type="number"  class="form-control" data-ng-init="idc3=24" data-ng-model="idc3"><span style="position: absolute; right: 5px;"></span> 
-    <span class="input-group-text text-primary">SONUÇ: </span>
-    <input type="number"  class="form-control" data-ng-model="((idc3*idc2)/idc1)"><br>
-  </div>
-  
-</div>
-
-
-<br>
-
-
-
-
-<hr>
-
-<h6 class="baslik"><span class="material-icons">
-  highlight_off
-  </span>TERS ORANTI</h6>
-<div class="col-lg-4">
-  
-  <div class="input-group mb-3" style="position: relative;">
-    
-    <input type="number"  class="form-control" data-ng-init="to1=20" data-ng-model="to1"><span > X </span> 
-    
-    <input type="number"  class="form-control" data-ng-init="to2=4" data-ng-model="to2"><span> = </span>
-    
-    <input type="number"  class="form-control" data-ng-init="to3=10" data-ng-model="to3"><span> X </span> 
-    <span class="input-group-text text-primary">SONUÇ: </span>
-    <input type="number"  class="form-control" data-ng-model="((to1*to2)/to3)"><br>
-    <br>
-  </div>
-  
-  
-</div>
-
-
-<br>
-
-
-<!--  -->
-
-<hr>
-
-
-
-
-
-
-
-<!--  -->
-
-<h6 class="baslik"><span class="material-icons">reorder</span> GRID TRADING</h6>
-<div class="col-lg-4">
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Şuanki fiyat: </span>
-    <input type="number"  class="form-control"  data-ng-init="gridFiyat=20" data-ng-model="gridFiyat"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Grid aralık oranı: %</span>
-    <input type="number"  class="form-control" data-ng-init="gridOran=0.49"  data-ng-model="gridOran"><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Kaç adet grid: </span>
-    <input type="number"  class="form-control" data-ng-init="gridAdet=50"  data-ng-model="gridAdet"><br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Adetlik alım: </span>
-    <input type="number"  class="form-control" data-ng-init="gridAlim=10.2"  data-ng-model="gridAlim"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-</div>
- 
-
-
-<br>
-<!-- Kaç USD gerekli? <span style="color: red;">{{((gridFiyat * (1-(((gridAdet*gridOran)/4)*0.01))*gridAdet/2)+(((gridAlim/gridFiyat) * gridAdet * gridFiyat/2))).toFixed(8)}} </span>  USD<br>  -->
-Kaç USD gerekli? <span style="color: red;">{{(
-  (gridAdet/2) * (
-  (gridAlim/(gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2)))))    *    
-  (gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2))))    +    
-  (gridAlim/(gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2)))))    *  
-  gridFiyat  
-  ) /2
-  +
-  (gridAlim/((1-((gridAdet/2)*gridOran*0.01))*gridFiyat)) * gridFiyat * (gridAdet/2)
-).toFixed(8)}} </span>  USD<br> 
-
-Üst limit: <span style="color: blue;">{{(gridFiyat + (gridFiyat*(gridOran*0.01) * (gridAdet/2))).toFixed(8)}}</span><br>
-Alt limit: <span style="color: blue;">{{(gridFiyat - (gridFiyat*(gridOran*0.01) * (gridAdet/2))).toFixed(8)}}</span><br>
-Adetlik Lot: <span style="color: green;"> {{(gridAlim/((1-((gridAdet/2)*gridOran*0.01))*gridFiyat)).toFixed(8)}} </span><br>
-<!-- Toplam Gereken: <span style="color: green;"> {{((gridAdet/2)*(gridAlim/((1-((gridAdet/2)*gridOran*0.01))*gridFiyat))).toFixed(8)}} </span> lot ve <span style="color: red;">{{(((gridFiyat) * (1-(((gridAdet*gridOran)/4)*0.01))*gridAdet/2)).toFixed(8)}} </span>  USD<br> -->
-Toplam Gereken: <span style="color: green;"> {{((gridAdet/2)*(gridAlim/((1-((gridAdet/2)*gridOran*0.01))*gridFiyat))).toFixed(8)}} </span> lot ve 
-<span style="color: red;">{{(
-  (gridAdet/2) * (
-  (gridAlim/(gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2)))))    *    
-  (gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2))))    +    
-  (gridAlim/(gridFiyat - (gridFiyat*(gridOran*0.01) * ((gridAdet/2)))))    *  
-  gridFiyat  
-  ) /2
-).toFixed(8)}} </span>  USD<br>
-
-<hr>
-
-<!--  -->
-
-<!--  -->
-
-<h6 class="baslik"><span class="material-icons">reorder</span> GRID TRADING AŞAĞIYA</h6>
-<div class="col-lg-4">
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Üst limit: </span>
-    <input type="number"  class="form-control"  data-ng-init="gridUstLimit=20" data-ng-model="gridUstLimit"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Grid aralık oranı: %</span>
-    <input type="number"  class="form-control" data-ng-init="gridUstOran=0.44"  data-ng-model="gridUstOran"><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Kaç adet grid: </span>
-    <input type="number"  class="form-control" data-ng-init="gridUstAdet=50"  data-ng-model="gridUstAdet"><br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Adetlik alım: </span>
-    <input type="number"  class="form-control" data-ng-init="gridUstAlim=10.2"  data-ng-model="gridUstAlim"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-</div>
-
-
- 
-<br>
-<!-- Kaç USD gerekli? <span style="color: red;">{{(gridUstAlim * gridUstAdet).toFixed(8)}} </span>  USD<br> -->
-<!-- Kaç USD gerekli? <span style="color: red;">{{(gridUstLimit * (1-(((gridUstAdet*gridUstOran)/2)*0.01))*gridUstAdet).toFixed(8)}} </span>  USD<br> -->
-Kaç USD gerekli? <span style="color: red;">{{(
-  gridUstAdet * (
-  (gridUstAlim/(gridUstLimit - (gridUstLimit*(gridUstOran*0.01) * (gridUstAdet))))    *    
-  (gridUstLimit - (gridUstLimit*(gridUstOran*0.01) * (gridUstAdet)))    +    
-  (gridUstAlim/(gridUstLimit - (gridUstLimit*(gridUstOran*0.01) * (gridUstAdet))))    *  
-  gridUstLimit  
-  ) /2
-  ).toFixed(8)}} </span>  USD<br>
-Üst limit: <span style="color: blue;">{{gridUstLimit.toFixed(8)}}</span><br>
-Alt limit: <span style="color: blue;">{{(gridUstLimit - (gridUstLimit*(gridUstOran*0.01) * (gridUstAdet))).toFixed(8)}}</span><br>
-<!-- Adetlik Lot: <span style="color: green;"> {{(gridUstAlim/((1-(gridUstAdet*gridUstOran*0.01))*gridUstLimit)).toFixed(8)}} </span><br> -->
-Adetlik Lot: <span style="color: green;"> {{(gridUstAlim/(gridUstLimit - (gridUstLimit*(gridUstOran*0.01) * (gridUstAdet)))).toFixed(8)}} </span><br>
-Toplam Lot: <span style="color: green;"> {{(gridUstAdet*(gridUstAlim/((1-(gridUstAdet*gridUstOran*0.01))*gridUstLimit))).toFixed(8)}} </span><br>
-Aşağıya %: <span style="color: blue;">{{(gridUstOran*gridUstAdet).toFixed(2)}}</span><br>
-<!-- Adetlik Lot: <span style="color: green;"> {{(gridUstAlim/gridUstLimit).toFixed(8)}} </span><br> -->
-<hr>
-
-<!--  -->
-<!--  -->
-
-<h6 class="baslik"><span class="material-icons">reorder</span> GRID TRADING YUKARIYA</h6>
-<div class="col-lg-4">
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Şuanki Fiyat: </span>
-    <input type="number"  class="form-control"  data-ng-init="gridAltFiyat=20" data-ng-model="gridAltFiyat"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Alt limit: </span>
-    <input type="number"  class="form-control"  data-ng-init="gridAltLimit=20" data-ng-model="gridAltLimit"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Grid aralık oranı: %</span>
-    <input type="number"  class="form-control" data-ng-init="gridAltOran=0.55"  data-ng-model="gridAltOran"><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Kaç adet grid: </span>
-    <input type="number"  class="form-control" data-ng-init="gridAltAdet=50"  data-ng-model="gridAltAdet"><br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Adetlik alım: </span>
-    <input type="number"  class="form-control" data-ng-init="gridAltAlim=10.2"  data-ng-model="gridAltAlim"><span style="position: absolute; right: 5px;"> USD</span><br>
-  </div>
-</div>
-
-
-
-<br>
-Kaç USD gerekli? <span style="color: red;">{{(((gridAltAlim/gridAltLimit) * gridAltAdet * gridAltFiyat)).toFixed(8)}} </span>  USD<br>
-<!-- Kaç USD gerekli? <span style="color: red;">{{((gridAltAlim * gridAltAdet)*(1 + ((gridAltAdet/2)*gridAltOran*0.01))).toFixed(8)}} </span>  USD<br> -->
-Üst limit: <span style="color: blue;">{{(gridAltLimit + (gridAltLimit*(gridAltOran*0.01) * (gridAltAdet))).toFixed(8)}}</span><br>
-Alt limit: <span style="color: blue;">{{gridAltLimit.toFixed(8)}}</span><br>
-Adetlik Lot: <span style="color: green;"> {{(gridAltAlim/gridAltLimit).toFixed(8)}} </span><br>
-Toplam Lot: <span style="color: green;"> {{(gridAltAdet*(gridAltAlim/gridAltLimit)).toFixed(8)}} </span><br>
-Yukarıya %: <span style="color: blue;">{{(gridAltOran*gridAltAdet).toFixed(2)}}</span><br>
-<hr>
-
-<!--  -->
-
-
-
-
-
-
-
-<!--  -->
-
-<h6 class="baslik"><span class="material-icons">face</span> %X KARLA BİRLEŞİK ÇARPAN</h6>
-<div class="col-lg-4">
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Anapara: </span>
-    <input type="number"  class="form-control"  data-ng-model="anapara4"><span style="position: absolute; right: 5px;"> TL</span><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Kazanç oranı: %</span>
-    <input type="number"  class="form-control"  data-ng-model="oran4"><br>
-  </div>
-  <div class="input-group mb-3">
-    <span class="input-group-text text-primary">Kaç adet: </span>
-    <input type="number"  class="form-control"  data-ng-model="adet4"><br>
-  </div>
-  <div class="input-group mb-3" style="position: relative;">
-    <span class="input-group-text text-primary">Adetlik kesinti: </span>
-    <input type="number"  class="form-control"  data-ng-model="kesinti4"><span style="position: absolute; right: 5px;"> TL</span><br>
-  </div>
-</div>
-
-
-
-<br>
-Sonuç: <span style="color: red;">{{sonuc4()}} </span>  TL<br>
-Kar yüzdesi: %<span style="color: blue;">{{(((sonuc4()-anapara4)/anapara4)*100).toFixed(0)}}</span><br>
-Kaç kat kazanç: <span style="color: green;">{{(((sonuc4()-anapara4)/anapara4)).toFixed(8)}}</span>
-<hr>
-
-<!--  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <h6 class="baslik"><span class="material-icons">fingerprint</span> MAALİYET HESAPLAMA:</h6>
-      <div class="col-lg-4">
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">İlk Lot Sayısı: </span>
-          <input type="number"  class="form-control"  data-ng-model="ilklot"><span style="position: absolute; right: 5px;">adet</span><br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">İlk Hisse Maaliyeti: </span>
-          <input type="number"  class="form-control"  data-ng-model="ilkmaaliyet"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">İkinci Lot Sayısı: </span>
-          <input type="number"  class="form-control"  data-ng-model="ikincilot"><span style="position: absolute; right: 5px;">adet</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">İkinci Hisse Maaliyeti: </span>
-          <input type="number"  class="form-control"  data-ng-model="ikincimaaliyet"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-      </div>
-
-
-      <br>
-      Son maaliyet:<span style="color: red;">{{sonmaaliyet()}} </span>  TL<br>
-      Toplam hisse adedi:<span style="color: rgb(4, 0, 255);">{{ilklot + ikincilot}} </span>  TL<br>
-      Toplam tutar:<span style="color: rgb(17, 0, 255);">{{(sonmaaliyet() * (ilklot + ikincilot)).toFixed(8)}} </span>  TL<br>
-      
-      <hr>
-      <!--  -->
-
-      <h6 class="baslik"><span class="material-icons">
-        favorite_border
-        </span>%X KAR İÇİN KAÇTAN SATMAN GEREKLİ?  :</h6>
-      <div class="col-lg-4">
-      <div class="input-group mb-3" style="position: relative;">
-        <span class="input-group-text text-primary">Lot sayısı: </span>
-        <input type="number"  class="form-control"  data-ng-model="adet"><span style="position: absolute; right: 5px;">adet</span> <br>
-      </div>
-      <div class="input-group mb-3" style="position: relative;">
-        <span class="input-group-text text-primary">Hisse maaliyeti: </span>
-        <input type="number"  class="form-control"  data-ng-model="maaliyet"><span style="position: absolute; right: 5px;">TL</span> <br>
-      </div>
-      <div class="input-group mb-3">
-        <span class="input-group-text text-primary">Kar etmek istediğin yüzde: %</span>
-        <input type="number"  class="form-control"  data-ng-model="kar"><br>
-      </div>
-    </div>
-      <br>
-      1 adet lotu satman gereken fiyat: <span style="color: red;">{{hisseSon()}} </span>  TL<br>
-      Toplam ele geçecek tutar: <span style="color:blue;" >{{hisseSon() * adet}}</span> TL <br>
-      Toplam net kar: <span style="color: green;">{{netkar1() }}</span>
-      <ul>
-        <li ng-repeat="x in products">
-          <span style="color:orange;">{{x.name}}</span> <span style="color:blue;">{{x.maaliyet}}</span> * <span style="color: green;">%{{x.kar}}</span> = <span style="color: red;">{{x.tutar}}</span><span ng-click="removeItem($index)">&times;</span>
-        </li>
-      </ul>
-      Hisse ismi: <input type="text" ng-model="addMe">
-      <button ng-click="addItem()">Ekle</button>
-      <p>{{errortext}}</p>
-
-
-
-
-      <hr>
-      <!--  -->
-      <h6 class="baslik"><span class="material-icons">
-        grade
-        </span>SATMAK İSTEDİĞİN KAZANÇ ORANI NE?  :</h6>
-      <div class="col-lg-4">
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">Lot sayısı: </span>
-          <input type="number"  class="form-control"  data-ng-model="adet2"><span style="position: absolute; right: 5px;">adet</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">1 lot Hisse maaliyeti: </span>
-          <input type="number"  class="form-control"  data-ng-model="maaliyet2"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">1 lotu kaçtan satmak istiyorsun? </span>
-          <input type="number"  class="form-control"  data-ng-model="fiyat2"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-      </div>
-
-      
-      <br>
-      Yüzdelik kazancın: <span style="color: red;">% {{farkyuzde()}}</span><br>
-      
-      Toplam ele geçecek tutar: <span style="color:green;">{{mytutar2()}}</span> TL <br>
-      Elde ettiğin net kar: <span style="color: blue;">{{mykar2()}} </span>  TL<br>
-
-      <hr>
-
-
-      <h6 class="baslik"><span class="material-icons">
-        verified
-        </span>PDDD/DD  :</h6>
-      <div class="col-lg-4">
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">PD/DD: </span>
-          <input type="number"  class="form-control" data-ng-init="PDDD=1.90" data-ng-model="PDDD"><span style="position: absolute; right: 5px;"></span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">DEFTER DEĞERİ:</span>
-          <input type="number"  class="form-control" data-ng-init="defterDegeri=7.84" data-ng-model="defterDegeri"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">1 LOT FİYATI: </span>
-          <input type="number"  class="form-control" data-ng-init="simdikiFiyat=14.94" data-ng-model="simdikiFiyat"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-      </div>
-
-      
-      <br>
-      PDDD/DD <span style="color: red;">{{(PDDD/defterDegeri).toFixed(2)}}</span><br>
-      
-      İlk Hedef: <span style="color:green;">{{((simdikiFiyat/(PDDD/defterDegeri))).toFixed(2)}}</span> TL {{(((simdikiFiyat/(PDDD/defterDegeri)))/simdikiFiyat).toFixed(1)}}x<br>
-      İkinci Hedef:  <span style="color: blue;">{{(((simdikiFiyat/(PDDD/defterDegeri))*1.6)).toFixed(2)}} </span>  TL {{((((simdikiFiyat/(PDDD/defterDegeri))*1.6))/simdikiFiyat).toFixed(1)}}x<br>
-      <a href="https://www.borsagundem.com/piyasa-ekrani/hisse-detay/ASELS" target="_blank">Aselsan</a>
-
-      <hr>
-      <!--  -->
-      <h6 class="baslik"><span class="material-icons">
-        pets
-        </span>X HİSSESİ NE KADARLIK OLSUN?  :</h6>
-      <div class="col-lg-4">
-        
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">1 lot Hisse maaliyeti: </span>
-          <input type="number"  class="form-control" data-ng-init="maaliyet3=100" data-ng-model="maaliyet3"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">Kaç liralık alacaksın?: </span>
-          <input type="number"  class="form-control"  data-ng-init="fiyat3=10" data-ng-model="fiyat3"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-      </div>
-
-      
-      <br>
-      Eline kaç lot geçecek? <span style="color: red;"> {{(fiyat3/maaliyet3).toFixed(8)}}</span><br>
-      
-      
-
-      <hr>
-      <h6 class="baslik"><span class="material-icons">
-        shopping_bag
-        </span>ELİNDEKİ LOT KAÇ TL YAPAR? :</h6>
-      <div class="col-lg-4">
-        
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">1 lot Hisse maaliyeti: </span>
-          <input type="number"  class="form-control" data-ng-init="maaliyet4=1852" data-ng-model="maaliyet4"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">Kaç lotun var?: </span>
-          <input type="number"  class="form-control"  data-ng-init="fiyat4=0.008" data-ng-model="fiyat4"><span style="position: absolute; right: 5px;">Adet</span> <br>
-        </div>
-      </div>
-
-      
-      <br>
-      Eline kaç TL geçecek? <span style="color: red;"> {{(fiyat4*maaliyet4).toFixed(8)}}</span><br>
-      
-      
-
-      <hr>
-            
-      
-
-      
-
-      
-      
-      <br>
-
-
-      <iframe id="SanalPiyasalar" src="https://www.ücretsiz.com/Kripto-Para-Cevirici.html" style="width:300px; height:545px;" frameborder="0"></iframe>
-      <hr>
-            
-      
-
-      
-
-      
-      
-      <br><br><br><br>
-
-      <!--  -->
-      <h6 class="baslik"><span class="material-icons">
-        flutter_dash
-        </span>ATR Sistemi</h6>
-      <div class="col-lg-4">
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">Hisse Fiyatı: </span>
-          <input type="number"  class="form-control" data-ng-init="hisse5=18; atr5=0.4" data-ng-model="hisse5"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        <div class="input-group mb-3" style="position: relative;">
-          <span class="input-group-text text-primary">ATR Seviyesi: </span>
-          <input type="number"  class="form-control" data-ng-model="atr5"><span style="position: absolute; right: 5px;">TL</span> <br>
-        </div>
-        
-      </div>
- 
-
-      <br>
-      Stop Loss: <span style="color: red;">{{(hisse5 - (1.5*atr5)).toFixed(8)}} </span>  TL<br>
-      -1. basamak: <span style="color: red;">{{(hisse5 - (1*atr5)).toFixed(8)}} </span>  TL<br>
-      0. basamak: <span style="color: blue;">{{(hisse5).toFixed(8)}} </span>  TL<br>
-      1. basamak: <span style="color: red;">{{(hisse5 + (1*atr5)).toFixed(8)}} </span>  TL<br>
-      2. basamak: <span style="color: red;">{{(hisse5 + (2*atr5)).toFixed(8)}} </span>  TL<br>
-      3. basamak: <span style="color: red;">{{(hisse5 + (3*atr5)).toFixed(8)}} </span>  TL<br>
-      4. basamak: <span style="color: red;">{{(hisse5 + (4*atr5)).toFixed(8)}} </span>  TL<br>
-      5. basamak: <span style="color: red;">{{(hisse5 + (5*atr5)).toFixed(8)}} </span>  TL<br>
-      6. basamak: <span style="color: red;">{{(hisse5 + (6*atr5)).toFixed(8)}} </span>  TL<br>
-      7. basamak: <span style="color: red;">{{(hisse5 + (7*atr5)).toFixed(8)}} </span>  TL<br>
-      8. basamak: <span style="color: red;">{{(hisse5 + (8*atr5)).toFixed(8)}} </span>  TL<br>
-      9. basamak: <span style="color: red;">{{(hisse5 + (9*atr5)).toFixed(8)}} </span>  TL<br>
-      10. basamak: <span style="color: red;">{{(hisse5 + (10*atr5)).toFixed(8)}} </span>  TL<br>
-      11. basamak: <span style="color: red;">{{(hisse5 + (11*atr5)).toFixed(8)}} </span>  TL<br>
-      12. basamak: <span style="color: red;">{{(hisse5 + (12*atr5)).toFixed(8)}} </span>  TL<br>
-      13. basamak: <span style="color: red;">{{(hisse5 + (13*atr5)).toFixed(8)}} </span>  TL<br>
-      
-      <hr>
-      <!--  -->
-      <p><a href="merhabalar.net/merhabalar.net/index.html"></a>merhabalar.net</p>
-      <p><a href="recinilt.tk/myprojects/public/index.html"></a>recinilt.tk</p>
-      
-        
-      </div>
-
-      
-      
-      <!--  -->
-
-
-
-    </div>
-
-
-
-
-
-
-      <script>
-      var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
-
-
-
-
-        //KAÇ DK GEÇMİŞ?
-        //var d = new Date();
-//a = d.getDay();     // getting the weekday
-$scope.zaman=new Date();
-//$scope.saat2=d.getHours();
-//$scope.dk2=d.getMinutes();
-
-//getDate();          // day as a number (1-31)
-//getDay();           // weekday as a number (0-6)
-//getFullYear();      // four digit year (yyyy)
-//getHours();         // hour (0-23)
-//getMilliseconds();  // milliseconds (0-999)
-//getMinutes();       // minutes (0-59)
-//getMonth();         // month (0-11)
-//getSeconds();       // seconds (0-59)
-//getTime();          // milliseconds since 1970
-          
-  $scope.gun1=$scope.zaman.getDate();
-  $scope.saat1= 13;
-  $scope.dk1= 13;
-          
-
-
-  
-
-          if (typeof(Storage) !== "undefined") {
-            if (localStorage.getItem("dklar")){
-              var myDklar = localStorage.getItem("dklar").split("*");
-              $scope.gun1=Number(myDklar[0]);
-              $scope.saat1=Number(myDklar[1]);
-              $scope.dk1=Number(myDklar[2]);
-              console.log(myDklar);
-              
-            } else {
-            $scope.gun1=$scope.zaman.getDate();
-            $scope.saat1= 13;
-            $scope.dk1= 13;
-            }
-          } else {
-            $scope.gun1=$scope.zaman.getDate();
-            $scope.saat1= 13;
-            $scope.dk1= 13;
-          }
-
-          console.log($scope.gun1);
-
-  
-            // localStorage.setItem("hisseler", "Smith john 143 - fgr dkdm 334 - lms ksl 323");
-            
-            // console.log(myhisseler);
-            // var mylstor = myhisseler.join(" - ");
-            // localStorage.setItem("hisseler2",mylstor);
-           
-
-          
-$scope.dkKaydet = function () {
-      if (typeof(Storage) !== "undefined") {
-            
-              myDklar33 = $scope.gun1 + "*" + $scope.saat1 + "*" + $scope.dk1;
-              console.log(myDklar33);
-              localStorage.setItem("dklar" , myDklar33);
-    } 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //} else {
-  //  $scope.errortext = "The item is already in your shopping list.";
-  //}
-
-/*
-$scope.removeItem = function (x) {
-  //$scope.errortext = "";
-  $scope.products.splice(x, 1);
-
-  if (typeof(Storage) !== "undefined") {
-            //if (localStorage.getItem("hisseler")){
-              //var myhisseler = localStorage.getItem("hisseler").split(" - ");
-              $scope.mylstore = [];
-              for(var i=0; i<$scope.products.length;i++){
-                $scope.mylstore.push($scope.products[i].name + " "+ $scope.products[i].maaliyet + " "+ $scope.products[i].kar + " "+ $scope.products[i].tutar);
-              }
-              $scope.myhisseler3 = $scope.mylstore.join(" - ");
-              localStorage.setItem("hisseler",$scope.myhisseler3);
-  }
-}
-*/
-        //////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          //%X KAR ETMEK İÇİN KAÇTAN SATMAN GEREKLİ?
-         $scope.adet=1;
-          $scope.maaliyet= 100;
-        $scope.kar= 5;
-          
-          $scope.hisseSon= function(){
-          $scope.toplam=$scope.maaliyet + ($scope.maaliyet * $scope.kar * 0.01);
-          $scope.toplam=$scope.toplam.toFixed(8);
-          return $scope.toplam;
-          }
-
-          $scope.netkar1 = function(){
-            return Number(($scope.hisseSon() * $scope.adet) - ($scope.maaliyet * $scope.adet)).toFixed(8);
-          }
-
-          
-          
-
-          $scope.products = [];
-          if (typeof(Storage) !== "undefined") {
-            if (localStorage.getItem("hisseler")){
-              var myhisseler = localStorage.getItem("hisseler").split(" - ");
-              for(var i=0; i<myhisseler.length;i++){
-                var hiss=myhisseler[i].split(" ");
-                var myhisse ={};
-                myhisse.name = hiss[0];
-                myhisse.maaliyet=hiss[1];
-                myhisse.kar = hiss[2];
-                myhisse.tutar=hiss[3];
-                $scope.products.push(myhisse);
-                console.log(myhisse);
-              }
-            }
-          }
-
-            // localStorage.setItem("hisseler", "Smith john 143 - fgr dkdm 334 - lms ksl 323");
-            
-            // console.log(myhisseler);
-            // var mylstor = myhisseler.join(" - ");
-            // localStorage.setItem("hisseler2",mylstor);
-           
-
-          
-$scope.addItem = function () {
-  //$scope.hisseadi = "";
-  //$scope.errortext = "";
-  if (!$scope.addMe) {return;}
-  //if ($scope.products.indexOf($scope.addMe) == -1) {
-    $scope.hisseadi = {};
-    $scope.hisseadi.name = $scope.addMe;
-    $scope.hisseadi.maaliyet=$scope.maaliyet;
-    $scope.hisseadi.kar = $scope.kar;
-    $scope.hisseadi.tutar= $scope.hisseSon();
-
-    //$scope.addMe + " hissesini %" + $scope.kar + " ile satmak için " + $scope.hisseSon() + " fiyattan satman gerek.";
-    //$scope.products.push($scope.hisseadi.name + " hissesini %" + $scope.hisseadi.kar + " ile satmak için " + $scope.hisseadi.tutar + " fiyattan satman gerek.");
-    $scope.products.push($scope.hisseadi);
-
-    if (typeof(Storage) !== "undefined") {
-            //if (localStorage.getItem("hisseler")){
-              //var myhisseler = localStorage.getItem("hisseler").split(" - ");
-              $scope.mylstore = [];
-              for(var i=0; i<$scope.products.length;i++){
-                $scope.mylstore.push($scope.products[i].name + " "+$scope.products[i].maaliyet + " "+ $scope.products[i].kar + " "+ $scope.products[i].tutar);
-              }
-              $scope.myhisseler3 = $scope.mylstore.join(" - ");
-              localStorage.setItem("hisseler",$scope.myhisseler3);
-    }
-}
-  //} else {
-  //  $scope.errortext = "The item is already in your shopping list.";
-  //}
-
-
-$scope.removeItem = function (x) {
-  //$scope.errortext = "";
-  $scope.products.splice(x, 1);
-
-  if (typeof(Storage) !== "undefined") {
-            //if (localStorage.getItem("hisseler")){
-              //var myhisseler = localStorage.getItem("hisseler").split(" - ");
-              $scope.mylstore = [];
-              for(var i=0; i<$scope.products.length;i++){
-                $scope.mylstore.push($scope.products[i].name + " "+ $scope.products[i].maaliyet + " "+ $scope.products[i].kar + " "+ $scope.products[i].tutar);
-              }
-              $scope.myhisseler3 = $scope.mylstore.join(" - ");
-              localStorage.setItem("hisseler",$scope.myhisseler3);
-  }
-}
-        //////////////////////////
-
-        //SATMAK İSTEDİĞİN FİYATTAKİ KAZANÇ ORANI NE? 
-        $scope.adet2=1;
-          $scope.maaliyet2= 100;
-        $scope.fiyat2= 105;
-          
-          $scope.farkyuzde= function(){
-          $scope.fark = $scope.fiyat2 - $scope.maaliyet2;
-          $scope.farkyuz = $scope.fark / $scope.maaliyet2;
-          $scope.farkyuz *= 100;
-          $scope.farkyuz = Number($scope.farkyuz).toFixed(8);
-          return $scope.farkyuz;
-          }
-
-          $scope.mytutar2 = function(){
-            $scope.tutar2 = $scope.adet2 * $scope.fiyat2;
-            $scope.tutar2 = Number($scope.tutar2).toFixed(8);
-            return $scope.tutar2;
-          }
-
-          $scope.mykar2 = function(){
-            $scope.kar3 =  ($scope.adet2 * $scope.fiyat2) - ($scope.adet2 * $scope.maaliyet2);
-            $scope.kar3 = Number($scope.kar3).toFixed(8);
-            return $scope.kar3;
-          }
-          //////////////////////////
-
-        
-        //MAALİYET HESAPLAMA
-        $scope.ilklot=100;
-        $scope.ilkmaaliyet= 10;
-        $scope.ikincilot=200;
-        $scope.ikincimaaliyet= 20;
-
-        $scope.sonmaaliyet= function(){
-          var ortalama=(($scope.ilklot * $scope.ilkmaaliyet) + ($scope.ikincilot * $scope.ikincimaaliyet))/($scope.ilklot+$scope.ikincilot);
-          ortalama=ortalama.toFixed(8);
-          return ortalama;
-          }
-          ///////////////
-          
-
-        //%X KARLA BİRLEŞİK ÇARPAN:
-        $scope.anapara4=10000;
-        $scope.adet4=200;
-        $scope.oran4=0.2;
-        $scope.kesinti4=0;
-
-        $scope.sonuc4 = function(){
-          var sum = Number($scope.anapara4);
-      var i=0;
-      for(i=0;i<Number($scope.adet4);i++){
-      sum=sum + (sum*Number($scope.oran4*0.01));
-      if($scope.kesinti4){
-          sum=sum-($scope.kesinti4);
-      }
-      }
-      return Number(sum).toFixed(8);
-        }
-      //////////////////////////////////
-
-        //ATR Sistemi
-        //$scope.hisse5=18;
-        //$scope.atr5=0.4;
-
-        
-      });
-      </script>
-
-
-
-
-<!-- 
-<hr>
-<h5 class="baslik">%X KARLA BİRLEŞİK ÇARPAN</h5>
-<div id="mydiv1"></div>
-<div id="mydiv2"></div>
-<p>anapara: <input type="number" id="anapara"></p>
-<p>adet: <input type="number" name="" id="adet"></p>
-<p>oran: %<input type="number" name="" id="oran"></p>
-<p>adet başına kesinti: <input type="number" name="" id="kesinti"></p>
-<button id="buton">hesapla</button>
-<p>sonuç: <span id="sonuc"></span></p>
- -->
-
-<!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/fulljs.js"></script>
+    <script>
+    </script>
 <script>
+    function toggleactive(link, page) {
+        document.getElementById("myhomelink").classList.remove("active");
+        document.getElementById("myweblink").classList.remove("active");
+        document.getElementById("myytlink").classList.remove("active");
+        document.getElementById("mypatentlink").classList.remove("active");
+        document.getElementById("myarduinolink").classList.remove("active");
+        document.getElementById(link).classList.add("active");
 
-  //$(document).ready(function () {
+        document.getElementById("myhome").classList.add("d-none");
+        document.getElementById("myyt").classList.add("d-none");
+        document.getElementById("myweb").classList.add("d-none");
+        document.getElementById("mypatent").classList.add("d-none");
+        document.getElementById("myarduino").classList.add("d-none");
+        document.getElementById(page).classList.remove("d-none");
 
-    /*
-      console.log("document ready");
+        document.getElementById("basliklink").click();
 
-      
-      
-      $("#buton").click(function () {
-          var myanapara=$("#anapara").val();
-      var myadet=$("#adet").val();
-      var myoran=$("#oran").val();
-      var mykesinti=$("#kesinti").val();
-          var mysonuc=kademeli(myanapara,myadet,myoran,mykesinti);
-          mysonuc = Number(mysonuc).toFixed(8);
-          $("#sonuc").html(mysonuc);
-          console.log(myoran);
-      });
+        if (link != "myytlink") {
+            stopinterv();
+            player.pauseVideo();
+        }
+    }
 
-     
-      
+    toggleactive("myarduinolink", "myarduino");
 
-      var a=kademeli(1000,52,0.05);
-  function kademeli(anapara,adet,oran,kesinti) {
-      var sum = Number(anapara);
-      var i=0;
-      for(i=0;i<Number(adet);i++){
-      sum=sum + (sum*Number(oran*0.01));
-      if(kesinti){
-          sum=sum-(kesinti);
-      }
-      }
-      return sum;
-  }
-
-  */
-  //$("#mydiv2").html(a);
-     
-  /*
-      var str='{"names":[' + // create json object
-  '{"first":"Hakuna","lastN":"Matata"},' +
-  '{"first":"Jane","lastN":"Doe"},' +
-  '{"first":"Air":"lastN":"Jordan"}]}';
-  var obj = JSON.parse(str);
-  //document.write(obj.names[1].first);
-  console.log(obj.names[1].first);
-      */
-  //});
-
- 
-
-  
+    //document.getElementById("toggicon1").addEventListener("blur", function() { this.click(); }); 
+    //document.getElementById("toggicon2").addEventListener("focusout", function() { this.click(); });
+    //dışarıdan fonk ismi de yazabilirdik, parantez koymadan.
 
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-popRpmFF9JQgExhfw5tZT4I9/CI5e2QcuUZPOVXb1m7qUmeR2b50u+YFEYe1wgzy" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
